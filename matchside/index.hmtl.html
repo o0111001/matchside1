@@ -60,15 +60,38 @@
         .logo-icon {
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            border-radius: 12px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 800;
-            font-size: 1.3rem;
-            box-shadow: 0 4px 20px rgba(26, 32, 44, 0.15);
+        }
+
+        .logo-icon::before,
+        .logo-icon::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: absolute;
+            border: 2px solid white;
+        }
+
+        .logo-icon::before {
+            left: 8px;
+            background: #3182ce;
+        }
+
+        .logo-icon::after {
+            right: 8px;
+            background: transparent;
+        }
+
+        .logo-icon .connector {
+            width: 18px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            z-index: 1;
         }
 
         .nav-links {
@@ -541,7 +564,9 @@
     <header>
         <nav class="container">
             <a href="#" class="logo">
-                <div class="logo-icon">M</div>
+                <div class="logo-icon">
+                    <div class="connector"></div>
+                </div>
                 Matchside
             </a>
             <ul class="nav-links">
@@ -558,12 +583,12 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">🇨🇭 Swiss Premium Recruiting</div>
-                <h1>Elite Matching für Premium Careers</h1>
-                <p class="subtitle">KI-gestütztes CV-Matching kombiniert mit exklusiver, persönlicher Beratung. Schweizer Präzision für außergewöhnliche Karrieren und Top-Talente.</p>
+                <div class="hero-badge">🇨🇭 Elite Recruiting</div>
+                <h1>Intelligentes Matching für aussergewöhnliche Karrieren</h1>
+                <p class="subtitle">KI-gestütztes CV-Matching kombiniert mit exklusiver, persönlicher Beratung. Schweizer Präzision für Top-Talente und anspruchsvolle Unternehmen.</p>
                 <div class="hero-ctas">
                     <a href="#" class="btn-primary">KI-Matching erleben</a>
-                    <a href="#" class="btn-secondary">Premium Beratung</a>
+                    <a href="#" class="btn-secondary">Exklusive Beratung</a>
                 </div>
                 
                 <div class="trust-stats">
@@ -592,7 +617,7 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Premium Services</h2>
+                <h2>Unsere Services</h2>
                 <p>Duale Elite-Strategie: Revolutionäre KI-Technologie für die Zukunft, exzellente persönliche Beratung für sofortige Erfolge.</p>
             </div>
             
@@ -606,9 +631,9 @@
                     <h3>KI-Matching Platform</h3>
                     <p class="description">Revolutionäre CV-Analyse mit transparenten Scoring-Algorithmen. Automatisierte Suche in allen Schweizer Stellenportalen mit 80%+ Matching-Genauigkeit.</p>
                     <ul class="service-features">
-                        <li>NLP-basierte CV-Analyse (spaCy, BERT)</li>
+                        <li>Präzises AI-Matching trifft persönliche Vermittlung</li>
                         <li>Automatisches Matching aller CH-Jobportale</li>
-                        <li>Freemium: 2 kostenlose Premium-Matches täglich</li>
+                        <li>Freemium: 2 kostenlose Matches täglich</li>
                         <li>Analytics, Coaching & Gehaltsbenchmarks</li>
                         <li>Transparente Scoring-Kriterien</li>
                         <li>API-Integration für Unternehmen</li>
@@ -623,8 +648,8 @@
                         <div class="service-icon">👥</div>
                         <div class="service-badge">Sofort verfügbar</div>
                     </div>
-                    <h3>Premium Consulting</h3>
-                    <p class="description">Exklusive Recruiting-Beratung von Experten. Persönliche Betreuung für Premium-Karrieren und strategisches Talent-Matching für anspruchsvolle Unternehmen.</p>
+                    <h3>Exklusive Beratung</h3>
+                    <p class="description">Erstklassige Recruiting-Expertise von Fachexperten. Persönliche Betreuung für anspruchsvolle Karrieren und strategisches Talent-Matching.</p>
                     <ul class="service-features">
                         <li>Branchenspezialisierung (Tech, Finance, Pharma)</li>
                         <li>C-Level & Senior-Positionen</li>
@@ -644,8 +669,8 @@
     <section class="target-groups">
         <div class="container">
             <div class="section-header">
-                <h2>Unsere Elite-Zielgruppen</h2>
-                <p>Spezialisierte Lösungen für anspruchsvolle Karrieren und Premium-Recruiting</p>
+                <h2>Unsere Zielgruppen</h2>
+                <p>Spezialisierte Lösungen für anspruchsvolle Karrieren und erstklassiges Recruiting</p>
             </div>
             <div class="groups-grid">
                 <div class="group-card">
@@ -666,7 +691,7 @@
                 <div class="group-card">
                     <div class="group-icon">🏢</div>
                     <h4>Enterprise Clients</h4>
-                    <p>Skalierbare HR-Lösungen für KMU bis Großkonzerne</p>
+                    <p>Skalierbare HR-Lösungen für KMU bis Grosskonzerne</p>
                 </div>
                 <div class="group-card">
                     <div class="group-icon">🎯</div>
@@ -676,7 +701,7 @@
                 <div class="group-card">
                     <div class="group-icon">🏫</div>
                     <h4>Universities</h4>
-                    <p>Career-Services und Premium-Absolventenprogramme</p>
+                    <p>Career-Services und exklusive Absolventenprogramme</p>
                 </div>
             </div>
         </div>
@@ -686,8 +711,8 @@
     <section class="technology" id="technology">
         <div class="container">
             <div class="section-header">
-                <h2 style="color: white;">Premium Technologie-Stack</h2>
-                <p style="color: #a0aec0;">Schweizer Präzision trifft modernste KI-Algorithmen und Enterprise-Grade-Sicherheit</p>
+                <h2 style="color: white;">Modernste Technologie</h2>
+                <p style="color: #a0aec0;">Schweizer Präzision trifft fortschrittliche KI und Enterprise-Grade-Sicherheit</p>
             </div>
             <div class="tech-grid">
                 <div class="tech-item">
@@ -724,17 +749,17 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h4>Matchside</h4>
-                    <p>Elite Matching für Premium Careers. Schweizer Qualität, KI-Innovation und persönliche Exzellenz für außergewöhnliche Karrieren.</p>
+                    <p>Intelligentes Matching für außergewöhnliche Karrieren. Schweizer Qualität, KI-Innovation und persönliche Exzellenz.</p>
                     <p><strong>Investment:</strong> 100.000 CHF<br>
                     <strong>Break-even:</strong> 2 Jahre geplant</p>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
                     <a href="#">KI-Matching Platform</a>
-                    <a href="#">Premium Consulting</a>
+                    <a href="#">Exklusive Beratung</a>
                     <a href="#">Enterprise Solutions</a>
                     <a href="#">White-Label APIs</a>
-                    <a href="#">Headhunting</a>
+                    <a href="#">Executive Search</a>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
